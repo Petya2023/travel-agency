@@ -1,0 +1,15 @@
+.page-numbers {
+  font-size: 1.6rem;
+  padding: 0.5rem 1rem;
+  background-color: $color-dark;
+  color: $color-white;
+  border: 1px solid $color-dark;
+  border-radius: 5px;
+  margin: 0 0.3rem;
+  display: inline-flex;
+}
+
+.current {
+  background-color: $color-white;
+  color: $color-dark;
+}

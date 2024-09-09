@@ -1,0 +1,42 @@
+.page-content__info-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 3rem;
+}
+
+.page-content {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 3rem;
+  box-shadow: 0rem 1rem 1.5rem rgba(#222, 0.15);
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.single-content__img {
+  height: 100%;
+  transition: transform 0.7s;
+  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 3rem;
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.7s;
+  }
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

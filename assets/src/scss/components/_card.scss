@@ -1,0 +1,92 @@
+.scene {
+  height: 100%;
+  perspective: 150rem;
+  transition: all 0.7s;
+  display: inline-block;
+  width: auto;
+
+  @include respond(tab-land) {
+    width: 28rem;
+  }
+
+  @include respond(tab-port) {
+    width: 34rem;
+  }
+
+  @include respond(phone) {
+    width: 35rem;
+  }
+
+  &:hover .card__img {
+    transform: scale(1.1);
+    transition: transform 0.7s;
+  }
+
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    &:hover .card__img {
+      transform: none;
+    }
+  }
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  box-shadow: 0rem 1rem 1.5rem rgba(#222, 0.15);
+
+  &__bottom {
+    padding: 2rem;
+  }
+
+  &__img-box {
+    height: 22rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    overflow: hidden;
+  }
+
+  &__img {
+    border-radius: 2rem 2rem 0 0;
+    transition: 0.7s;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $color-dark;
+    font-weight: 400;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s;
+    text-align: center;
+  }
+
+  &__price {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+    font-size: 3rem;
+    font-weight: 400;
+    color: $color-dark;
+    text-align: center;
+    transition: all 0.3s;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 5rem;
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+}

@@ -1,0 +1,32 @@
+.dropdown__content-responsive {
+  display: none;
+  border-radius: 0.5rem;
+  min-width: 160px;
+  z-index: 1;
+  transition: all 3s;
+}
+
+.dropdown__content-responsive-2 {
+  display: none;
+  border-radius: 0.5rem;
+  min-width: 160px;
+  z-index: 1;
+  transition: all 3s;
+}
+
+.dropdown-list li {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.dropdown-list a {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: $color-dark;
+  margin: 5rem 0;
+
+  transition: 0.2s;
+  &:hover {
+    color: $color-primary;
+  }
+}

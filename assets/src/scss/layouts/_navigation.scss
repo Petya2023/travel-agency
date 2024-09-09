@@ -1,0 +1,135 @@
+.nav {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 10rem;
+  transition: 0.3s;
+  background-color: $color-white;
+  // backdrop-filter: blur(0.1rem);
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__logo__img {
+    height: 6.5rem;
+  }
+
+  // @include respond(tab-port) {
+  //   display: none;
+  // }
+
+  // @include respond(phone) {
+  //   display: none;
+  // }
+}
+
+.sticky {
+  height: 10rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $color-white;
+  z-index: 10;
+}
+
+.sticky ul li a {
+  color: $color-dark;
+}
+
+.sticky .icon-social {
+  color: #747474;
+}
+
+.sticky .icon-social:hover {
+  color: $color-dark;
+}
+
+.sticky .hidden-cross {
+  color: $color-dark;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item a {
+  text-transform: uppercase;
+  transition: 0.3s;
+  font-weight: 500;
+  color: $color-dark;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.menu-header-menu li a {
+  font-size: 1.6rem;
+  margin: 10rem 0;
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
+
+.menu-header-menu-container .menu .menu-item {
+  &:not(:last-child) {
+    padding-right: 2.7rem;
+  }
+}
+
+.hidden-cross {
+  display: none;
+  font-size: 3rem;
+  color: $color-dark;
+  cursor: pointer;
+  @include respond(tab-port) {
+    display: block;
+  }
+}
+
+.sidebar {
+  backdrop-filter: blur(1rem);
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 11;
+  width: 50%;
+  background-color: rgba($color-white, 0.8);
+  box-shadow: -1rem 0 1rem rgba(0, 0, 0, 0.2);
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+
+.sidebar li,
+.sidebar li a {
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.sidebar-menu-list {
+  padding: 2rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.sidebar-menu-list li a {
+  color: $color-dark;
+}
+
+.icon-x {
+  transition: 0.2s;
+  padding: 2.5rem;
+  font-size: 4rem;
+}

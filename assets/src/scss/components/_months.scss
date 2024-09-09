@@ -1,0 +1,50 @@
+.months {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  margin: 0 2rem;
+  padding: 3rem 2rem;
+  justify-content: space-between;
+  border-radius: 5rem;
+  background-color: rgba($color-white, 0.8);
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @include respond(tab-port) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__month {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transform: translateY(-0.5rem) scale(1.09);
+    }
+    @include respond(tab-land) {
+      padding: 2rem 0;
+    }
+    @include respond(phone) {
+      padding: 1rem 0;
+    }
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+      &:hover {
+        transform: none;
+      }
+    }
+
+    &__text {
+      color: $color-dark;
+      @include respond(tab-land) {
+        padding: 1rem 0;
+      }
+    }
+  }
+}
